@@ -45,7 +45,6 @@ product_listings = [
     condition: "Good",
     exchange_item: "Very nice office furniture(desk, high back chairs)",
     location: "Nebraska City, Nebraska",
-    date_posted: "02/27/2017",
     rating: 5,
     user_id: 1,
     category_id: 15
@@ -59,7 +58,6 @@ product_listings = [
     condition: "Like new",
     exchange_item: "Cash",
     location: "Washington D.C., District of Columbia",
-    date_posted: "02/08/2017",
     rating: 2,
     user_id: 1,
     category_id: 20
@@ -73,11 +71,23 @@ product_listings = [
     condition: "Old",
     exchange_item: "rc helicopter",
     location: "Washington D.C., District of Columbia",
-    date_posted: "02/10/2018",
-    rating: 1,
+    rating: 4,
     user_id: 1,
-    category_id: 31
+    category_id: 21
   },
+  {
+    name: "Car",
+    description: "60 series, engine brakes, cruise, air ride suspension. Needs tires and left headlight assembly. Valued at $5,800. Will consider trading for older model hopper bottom trailer.",
+    image: "https://barteronly.com/images/com_adsmanager/ads/1991-peterbilt-377-truck_642_1_t.jpg",
+    value: "2",
+    delivery_method: "Pick up",
+    condition: "Like new",
+    exchange_item: "Cash",
+    location: "Washington D.C., District of Columbia",
+    rating: 3,
+    user_id: 1,
+    category_id: 20
+  }
 ];
 
 def seedUsers(users)
@@ -109,7 +119,6 @@ def seedProductListings(product_listings)
     condition: product_listings[i][:condition],
     exchange_item: product_listings[i][:exchange_item],
     location: product_listings[i][:location],
-    date_posted: product_listings[i][:date_posted],
     rating: product_listings[i][:rating],
     user_id: product_listings[i][:user_id],
     category_id: product_listings[i][:category_id]

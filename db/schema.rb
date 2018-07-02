@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2018_06_28_192206) do
     t.string "delivery_method"
     t.string "exchange_item"
     t.string "location"
-    t.datetime "date_posted"
     t.integer "rating"
     t.integer "user_id"
     t.integer "category_id"
