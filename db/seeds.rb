@@ -43,11 +43,12 @@ product_listings = [
     value: "200",
     delivery_method: "Shipping",
     condition: "Good",
-    exchange_item: "Very nice office furniture(desk, high back chairs)",
+    exchange_item: null,
     location: "Nebraska City, Nebraska",
     rating: 5,
     user_id: 1,
-    category_id: 15
+    category_id: 15,
+    isSold: false
   },
   {
     name: "1991 Peterbilt 377 Truck",
@@ -56,11 +57,12 @@ product_listings = [
     value: "20000",
     delivery_method: "Pick up",
     condition: "Like new",
-    exchange_item: "Cash",
+    exchange_item: null,
     location: "Washington D.C., District of Columbia",
     rating: 2,
     user_id: 1,
-    category_id: 20
+    category_id: 20,
+    isSold: false
   },
   {
     name: "duratrax rc car",
@@ -73,7 +75,8 @@ product_listings = [
     location: "Washington D.C., District of Columbia",
     rating: 4,
     user_id: 1,
-    category_id: 21
+    category_id: 21,
+    isSold: false
   },
   {
     name: "Car",
@@ -86,7 +89,8 @@ product_listings = [
     location: "Washington D.C., District of Columbia",
     rating: 3,
     user_id: 1,
-    category_id: 20
+    category_id: 20,
+    isSold: false
   }
 ];
 
