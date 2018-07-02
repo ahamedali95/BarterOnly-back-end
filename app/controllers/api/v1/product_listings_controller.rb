@@ -16,6 +16,13 @@ class Api::V1::ProductListingsController < ApplicationController
   end
 
   def update
+    @product_listing = ProductListing.find(params[:id])
+
+    @product_listing.update(get_params)
+      render json: @product_listing
+    else
+      render json: {error: "something went wrong!"}
+    end
   end
 
   def destroy
