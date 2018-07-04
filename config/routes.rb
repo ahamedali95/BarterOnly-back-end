@@ -7,4 +7,7 @@ Rails.application.routes.draw do
       resources :purchases, only: [:index, :create]
     end
   end
+
+  #post "/users", to: "users#create"
+  post "/sessions", to: "sessions#create"
 end

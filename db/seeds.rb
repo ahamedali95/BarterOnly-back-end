@@ -43,7 +43,7 @@ product_listings = [
     value: "200",
     delivery_method: "Shipping",
     condition: "Good",
-    exchange_item: null,
+    exchange_item: nil,
     location: "Nebraska City, Nebraska",
     rating: 5,
     user_id: 1,
@@ -57,7 +57,7 @@ product_listings = [
     value: "20000",
     delivery_method: "Pick up",
     condition: "Like new",
-    exchange_item: null,
+    exchange_item: nil,
     location: "Washington D.C., District of Columbia",
     rating: 2,
     user_id: 1,
@@ -85,7 +85,7 @@ product_listings = [
     value: "2",
     delivery_method: "Pick up",
     condition: "Like new",
-    exchange_item: "Cash",
+    exchange_item: nil,
     location: "Washington D.C., District of Columbia",
     rating: 3,
     user_id: 1,
@@ -125,7 +125,8 @@ def seedProductListings(product_listings)
     location: product_listings[i][:location],
     rating: product_listings[i][:rating],
     user_id: product_listings[i][:user_id],
-    category_id: product_listings[i][:category_id]
+    category_id: product_listings[i][:category_id],
+    isSold: product_listings[i][:isSold]
   )
   end
 end

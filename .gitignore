@@ -17,6 +17,7 @@
 /storage/*
 
 .byebug_history
-
+#This is for all our super secret stuff.
+.env
 # Ignore master key for decrypting credentials and more.
 /config/master.key

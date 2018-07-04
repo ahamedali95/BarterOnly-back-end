@@ -22,6 +22,13 @@ gem 'rack-cors'
 #This provides a dedicated place to fully customize the JSON output.
 gem "active_model_serializers"
 
+#token based authentication
+gem "jwt"
+
+gem "bcrypt"
+
+gem "dotenv-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

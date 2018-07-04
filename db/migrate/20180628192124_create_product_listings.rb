@@ -12,6 +12,7 @@ class CreateProductListings < ActiveRecord::Migration[5.2]
       t.integer :rating
       t.integer :user_id
       t.integer :category_id
+      t.boolean :isSold
 
       t.timestamps
     end

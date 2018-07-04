@@ -18,7 +18,7 @@ class Api::V1::ProductListingsController < ApplicationController
   def update
     @product_listing = ProductListing.find(params[:id])
 
-    @product_listing.update(get_params)
+    if @product_listing.update(get_params)
       render json: @product_listing
     else
       render json: {error: "something went wrong!"}
@@ -45,7 +45,8 @@ class Api::V1::ProductListingsController < ApplicationController
       :delivery_method,
       :exchange_item,
       :category_id,
-      :user_id
+      :user_id,
+      :isSold
     )
   end
 end
