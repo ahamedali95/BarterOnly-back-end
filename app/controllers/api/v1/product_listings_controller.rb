@@ -1,4 +1,6 @@
 class Api::V1::ProductListingsController < ApplicationController
+  #before_action :requires_login, only: [:index]
+
   def index
     @product_listings = ProductListing.all
     render json: @product_listings
