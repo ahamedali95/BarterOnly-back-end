@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "/users", to: "users#index"
       post "/users", to: "users#create"
       get "/users/:id/product_listings", to: "users#user_product_listings"
+      post "/sessions", to: "sessions#create"
       resources :product_listings, except: [:edit, :new]
       resources :categories, only: [:index, :create]
       resources :purchases, only: [:index, :create]
@@ -12,5 +13,5 @@ Rails.application.routes.draw do
   end
 
   #post "/users", to: "users#create"
-  post "/sessions", to: "sessions#create"
+  # post "/sessions", to: "sessions#create"
 end
