@@ -13,7 +13,9 @@ class Api::V1::ProductListingsController < ApplicationController
       @product_listing.save
       render json: @product_listing
     else
-      render json: {error: "something went wrong!"}
+      render json: {
+        errors: @product_listing.errors.full_messages
+      }, status: :unprocessable_entity
     end
   end
 
@@ -23,7 +25,9 @@ class Api::V1::ProductListingsController < ApplicationController
     if @product_listing.update(get_params)
       render json: @product_listing
     else
-      render json: {error: "something went wrong!"}
+      render json: {
+        errors: @product_listing.errors.full_messages
+      }, status: :unprocessable_entity
     end
   end
 
