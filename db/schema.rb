@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_07_02_172134) do
     t.string "first_name"
     t.string "last_name"
     t.string "location"
+    t.string "image"
     t.string "username"
     t.string "password_digest"
     t.datetime "created_at", null: false

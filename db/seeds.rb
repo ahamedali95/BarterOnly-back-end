@@ -1,5 +1,5 @@
 users = [
-  {first_name: "Ahamed", last_name: "Abbas", location: "New York, NY", username: "ahamedali95", password_digest: "1234"}
+  {first_name: "Ahamed", last_name: "Abbas", image: "", location: "Alaska", username: "ahamedali95", password: "meccamadina", password_confirmation: "meccamadina"}
 ];
 
 categories = [
@@ -37,8 +37,8 @@ categories = [
 
 product_listings = [
   {
-    name: "RCA Stereo with Sony Speakers",
-    description: "This is a tuner with cassette. Has hook-ups for CD player and television. I use it in my garage while working on my car.",
+    name: "RCA Stereakers",
+    description: "This is a tuner with cassettage while working on my car.",
     image: "https://barteronly.com/images/com_adsmanager/ads/rca-stereo-with-sony-speakers_49_2.jpg",
     value: "200",
     delivery_method: "Shipping",
@@ -51,8 +51,8 @@ product_listings = [
     isSold: false
   },
   {
-    name: "1991 Peterbilt 377 Truck",
-    description: "991 Peterbilt 377, 400hp Detroit , 60 series, engine brakes, cruise, air ride suspension. Needs tires and left headlight assembly. Valued at $5,800. Will consider trading for older model hopper bottom trailer.",
+    name: "1991 Petk",
+    description: "991 Peterise, air ride suspension. Needs tir older model hopper bottom trailer.",
     image: "https://barteronly.com/images/com_adsmanager/ads/1991-peterbilt-377-truck_642_1_t.jpg",
     value: "20000",
     delivery_method: "Pick up",
@@ -79,8 +79,8 @@ product_listings = [
     isSold: false
   },
   {
-    name: "Car",
-    description: "60 series, engine brakes, cruise, air ride suspension. Needs tires and left headlight assembly. Valued at $5,800. Will consider trading for older model hopper bottom trailer.",
+    name: "Carjjbjb",
+    description: "60 serieser trading for older model hopper bottom trailer.",
     image: "https://barteronly.com/images/com_adsmanager/ads/1991-peterbilt-377-truck_642_1_t.jpg",
     value: "2",
     delivery_method: "Pick up",
@@ -96,12 +96,14 @@ product_listings = [
 
 def seedUsers(users)
   for i in 0..(users.length - 1)
-    User.find_or_create_by(
+    User.create(
       first_name: users[i][:first_name],
       last_name: users[i][:last_name],
       location: users[i][:location],
+      image: users[i][:image],
       username: users[i][:username],
-      password_digest: users[i][:password_digest]
+      password: users[i][:password],
+      password_confirmation: users[i][:password_confirmation]
     )
   end
 end

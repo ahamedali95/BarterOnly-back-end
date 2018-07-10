@@ -58,6 +58,7 @@ class Api::V1::UsersController < ApplicationController
       :first_name,
       :last_name,
       :location,
+      :image,
       :username,
       :password,
       :password_confirmation
