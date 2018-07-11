@@ -1,6 +1,8 @@
 class Api::V1::UsersController < ApplicationController
   before_action :requires_login, only: [:user_product_listings]
   before_action :requires_user_match, only: [:user_product_listings]
+  before_action :requires_login, only: [:user_purchases]
+  before_action :requires_user_match, only: [:user_purchases]
 
   def index
     @users = User.all
@@ -49,6 +51,10 @@ class Api::V1::UsersController < ApplicationController
 
   def user_product_listings
     render json: @user.product_listings
+  end
+
+  def user_purchases
+    render json: @user.purchases
   end
 
   private
