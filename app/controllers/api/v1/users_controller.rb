@@ -1,8 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :requires_login, only: [:user_product_listings]
-  before_action :requires_user_match, only: [:user_product_listings]
-  before_action :requires_login, only: [:user_purchases]
-  before_action :requires_user_match, only: [:user_purchases]
+  before_action :requires_login, only: [:user_product_listings, :user_purchases]
+  before_action :requires_user_match, only: [:user_product_listings, :user_purchases]
 
   def index
     @users = User.all
