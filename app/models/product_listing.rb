@@ -4,9 +4,9 @@ class ProductListing < ApplicationRecord
 
   #validations
   validates :name, {presence: true}
-  validates :name, length: {minimum: 5, maximum: 20}
+  validates :name, length: {minimum: 5, maximum: 26}
   validates :description, {presence: true}
-  validates :description, length: {minimum: 10, maximum: 100}
+  validates :description, length: {minimum: 10, maximum: 200}
   validates :image, {presence: true}
   validates :condition, {presence: true}
   validates :location , {presence: true}
